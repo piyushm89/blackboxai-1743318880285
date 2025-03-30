@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event - College Event System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">College Events</h1>
+            <div class="space-x-4">
+                <a href="index.html" class="hover:text-blue-200"><i class="fas fa-home"></i> Home</a>
+                <a href="events.html" class="hover:text-blue-200"><i class="fas fa-calendar-alt"></i> Events</a>
+                <a href="create-event.html" class="hover:text-blue-200"><i class="fas fa-plus-circle"></i> Create</a>
+                <a href="dashboard.html" class="hover:text-blue-200"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 max-w-2xl">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800">Create New Event</h2>
+        
+        <form id="event-form" class="bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label for="event-name" class="block text-gray-700 font-medium mb-2">Event Name</label>
+                <input type="text" id="event-name" required
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="event-date" class="block text-gray-700 font-medium mb-2">Date & Time</label>
+                <input type="datetime-local" id="event-date" required
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="event-location" class="block text-gray-700 font-medium mb-2">Location</label>
+                <input type="text" id="event-location" required
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="event-image" class="block text-gray-700 font-medium mb-2">Image URL</label>
+                <input type="url" id="event-image" 
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="https://example.com/image.jpg">
+            </div>
+
+            <div class="mb-6">
+                <label for="event-description" class="block text-gray-700 font-medium mb-2">Description</label>
+                <textarea id="event-description" rows="4" required
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+
+            <div class="flex justify-end space-x-4">
+                <button type="button" onclick="window.location.href='events.html'" 
+                    class="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100">
+                    Cancel
+                </button>
+                <button type="submit" 
+                    class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                    Create Event
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 College Event Management System</p>
+            <p class="mt-2"><a href="about.html" class="text-blue-300 hover:underline">About this project</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
